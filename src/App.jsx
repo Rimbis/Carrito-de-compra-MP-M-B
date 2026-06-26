@@ -14,6 +14,7 @@ const traductorCategorias = {
   "jewelery": "Joyería"
 };
 
+
 const TemaContext = createContext();
 
 
@@ -42,14 +43,15 @@ export default function App() {
 
     <div className={`Cuerpo-Completo ${temaOscuro ? 'tema-oscuro' : 'tema-claro'}`}>
 
-      <button onClick={toggleTema}>
+      <button className="btn-tema" onClick={toggleTema}>
         <i className={`bi ${temaOscuro ? 'bi-sun-fill' : 'bi-moon-stars-fill'}`}></i>
         {temaOscuro ? ' Modo claro' : ' Modo oscuro'}
       </button>
       <div className='Cuerpo-Completo'>
-        <h1>Mercado tu pagas</h1>
+        <h1 className="titulazo">Mercado tu pagas</h1>
 
-        <input
+        <input 
+          className="Inputs"
           type="text"
           placeholder="Buscar producto o categoría..."
           value={busqueda}
@@ -79,7 +81,7 @@ export default function App() {
               favoritos.map(fav => (
                 <div key={fav.id}>
                   <h4>{fav.title}</h4>
-                  <button onClick={() => toggleFavorito(fav)}>Quitar</button>
+                  <button className="btn-quitar" onClick={() => toggleFavorito(fav)}>Quitar</button>
                 </div>
               ))
             )}
@@ -110,15 +112,8 @@ export default function App() {
             {paginas.map(num => (
               <button
                 key={num}
+                className={`btn-pagina ${paginaActual === num ? 'activo' : ''}`}
                 onClick={() => setPaginaActual(num)}
-                style={{
-                  padding: '8px 12px',
-                  cursor: 'pointer',
-                  backgroundColor: paginaActual === num ? '#20578f' : '#fff',
-                  color: paginaActual === num ? '#fff' : '#000',
-                  border: '1px solid #ccc',
-                  borderRadius: '4px'
-                }}
               >
                 {num}
               </button>

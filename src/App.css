@@ -1,20 +1,192 @@
+/* Tema claro/oscuro */
 .tema-claro {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffb46e;
+    color: #1a1a2e;
+
+    .titulazo {
+        color: #16213e;
+    }
+
+    .Contenedor {
+        background-color: #ff9a3c;
+    }
+
+    .btn-tema {
+        background-color: #ffe0c2;
+        color: #b85c00;
+        border-color: #b85c00;
+    }
 }
 
 .tema-oscuro {
     background-color: #1a1a2e;
     color: #e0e0e0;
+
+    .titulazo {
+        color: #a0bce0;
+    }
+
+    .Contenedor {
+        background-color: #16213e;
+    }
 }
 
-/* Si querés que los componentes hijos también cambien */
-.tema-oscuro .Contenedor-Chiquito {
+/* Contenedores*/
+.Contenedor {
     background-color: #16213e;
-    border-color: #444;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 10px;
 }
 
-.tema-oscuro button {
-    background-color: #444;
+.Otro-Contenedor-Chiquito {
+    background-color: #eef3ff;
+    border: 1.5px solid #7a9fd4;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.tema-oscuro .Otro-Contenedor-Chiquito {
+    background-color: #16213e;
+    border-color: #3a5280;
+    color: #e0e0e0;
+}
+
+/* las cajitas de los productos */
+.Cartitas {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgba(77, 172, 140, 0.15);
+    border: 1.5px dashed #3d9e82;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Boton de los temas */
+.btn-tema {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1.5px solid #20578f;
+    background-color: #e8f0fb;
+    color: #20578f;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-tema:hover {
+    background-color: #d0e3f7;
+}
+
+
+.tema-oscuro .btn-tema {
+    background-color: #16213e;
+    border-color: #a0bce0;
+    color: #a0bce0;
+}
+
+.tema-oscuro .btn-tema:hover {
+    background-color: #1e2d52;
+}
+
+/* todas las paginas*/
+.btn-pagina {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-pagina:hover {
+    border-color: #20578f;
+    color: #20578f;
+}
+
+.btn-pagina.activo {
+    background-color: #20578f;
     color: #fff;
+    border-color: #20578f;
+}
+
+/* Boton para quitar de fav */
+.btn-quitar {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px #e05c5c;
+    background-color: transparent;
+    color: #e05c5c;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-quitar:hover {
+    background-color: #fdeaea;
+}
+
+/* Favoritos */
+.botonDos {
+    align-self: center;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.botonDos:hover {
+    transform: scale(1.2);
+}
+
+/* Buscador */
+.Inputs {
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+/* Titulo */
+
+h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+h1::before,
+h1::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: #20578f;
+}
+
+h1::before {
+    background: linear-gradient(to right, transparent, #20578f);
+}
+
+h1::after {
+    background: linear-gradient(to left, transparent, #20578f);
+}
+
+.titulazo {
+    border-left: 5px solid darkorange;
+    padding-left: 12px;
+    border-right: 5px solid darkorange;
+    text-align: center;
+    color: rgb(245, 98, 0) !important;
+    margin-bottom: 30px;
 }

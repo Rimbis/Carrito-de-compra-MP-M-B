@@ -10,12 +10,11 @@ const traductorCategorias = {
 function Productos({ producto, agregarAlCarrito, existe, esFavorito, toggleFavorito }) {
 
     return (
-        <div className='Usar-flex'>
+        <div className='Cartitas'>
 
             {/* Botón de Favorito */}
-            <button
+            <button className='botonDos'
                 onClick={() => toggleFavorito(producto)}
-                style={{ alignSelf: 'flex-end', background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer' }}
             >
                 {esFavorito ? '★' : '☆'}
             </button>
@@ -35,7 +34,7 @@ function Productos({ producto, agregarAlCarrito, existe, esFavorito, toggleFavor
             <p>★ {producto.rating?.rate} ({producto.rating?.count} opiniones)</p>
             <p>{producto.description}</p>
 
-            <button
+            <button className='botonDos'
                 onClick={() => agregarAlCarrito(producto)}
                 style={{ marginTop: 'auto', cursor: 'pointer' }}
             >
