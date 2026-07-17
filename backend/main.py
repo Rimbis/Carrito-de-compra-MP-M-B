@@ -58,9 +58,9 @@ def post_carrito(carrito: Carrito):
         }
         for item in carrito.items
         ],"back_urls": {
-            "success": "https://www.google.com",
-            "failure": "https://www.google.com",
-            "pending": "https://www.google.com"
+            "success": "https://carritomercadopagobm.vercel.app",
+            "failure": "https://carritomercadopagobm.vercel.app",
+            "pending": "https://carritomercadopagobm.vercel.app"
 },
 "auto_return": "approved"
 }
